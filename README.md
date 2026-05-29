@@ -27,3 +27,9 @@ Due to the fact it is a small project frameworks would cause complexity with lit
 - **Global variable for drag state.** A plain variable stores 'draggedShape'. Other vode could overwrite it in a larger codebase causing bugs. A cleaner approach maybe contain it properly.
 - **Fixed shape size.** Regardless of how big the quadrant is, every shape is 30x30px. Given more time I could potentially make shape read the size of the quadrant and scale itself up or down relative to the quadrant size.
 - **No test framework.** Unit tests are running directly in browser console. Could upgrade to use a proper test runner like Jest.
+
+## References
+
+- MDN Web Docs - HTML5 Drag and Drop API
+- MDN Web Docs - SVG Basic Shapes
+- MDN Web Docs - CSS Grid Layout
