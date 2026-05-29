@@ -29,3 +29,23 @@ const box = document.getElementById('q1');
 for (let i = 0; i < 5; i++) {
     box.appendChild(createShape('circle'));
 }
+
+let draggedShape = null;
+
+document.querySelectorAll('div[draggable]').forEach(div => {
+    div.addEventListener('dragstart', function() {
+        draggedShape = this;
+    });
+});
+
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('dragover', function(e) {
+        e.preventDefault();
+    });
+});
+
+document.querySelectorAll('.box').forEach(box => {
+    box.addEventListener('drop', function() {
+        this.appendChild(draggedShape);
+    });
+});
